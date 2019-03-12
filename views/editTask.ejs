@@ -2,57 +2,23 @@
 <html lang="en" class="no-js">
 
 <head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-	<meta content="" name="description" />
+	<title>Edit Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 </head>
 <body >
 
-					<span class="username">Admin</span>
+<div>
+	<nav class="navbar navbar-default">
+		<span class="username">Admin</span>
+		<button type="logout" name="logout"  class="btn"><a href="/logout">Logout</a></button>
+	</nav>
 
-					<li><a href="/logout">&nbsp;Log Out</a></li>
-
-
-
-
-
-
-
-
-
-     <div class="page-content">
-			<div class="row">
-				<div class="col-md-12"> 
-					<ul class="page-breadcrumb breadcrumb"> 
-
-					
-
-						<li>
-							<a href="#">Work </a>
-						</li>
-					</ul> 
-				</div>
-			</div> 
-			<div class="row">
-				<div class="col-md-12">
-					<div class="table-toolbar">
-
-								<div class="btn-group">
-									<a href="/taskview"><button >
-									View Task &nbsp;
-									</button></a>
-								</div>
-					</div>
-					<div class="portlet box purple ">
-						<div class="portlet-title">
-							<div class="caption">
-								 Add Work
-							</div>
-
-						</div>
-						<div class="portlet-body form">
+			<button class="btn btn-default" ><a href="/taskview" >View Task</a></button>
 
 							<%try{%>
 
@@ -62,32 +28,32 @@
 
 
 									<div class="form-group">
-										<label class="col-md-3" >Work</label>
-										<div class="col-md-9">
+										<label class="col-md-3  control-label" >Work</label>
+										<div  class="col-md-6">
                                             <input type="hidden" class="form-control" id="id" name="id" <% if(data.length){%> value="<%= data[0].id%>" <%}%>>
 											<input type="text" class="form-control" id="work" name="work"  required <%if(data.length) {%>value="<%= data[0].work%>" <%}%> >
 										</div>
 									</div>
 
                                     <div class="form-group">
-                                        <label class="col-md-3">Start-date</label>
-                                        <div class="col-md-9"> 
+                                        <label class="col-md-3  control-label">Start-date</label>
+                                        <div class="col-md-6">
                                             <input type="date" class="form-control" id="start_date" name="start_date"  required <%if(data.length) {%>value="<%= data[0].start_date%>" <%}%> >
                                         </div>
                                     </div>
 
 
                                     <div class="form-group">
-                                        <label class="col-md-3">End-date</label>
-                                        <div class="col-md-9">
+                                        <label class="col-md-3  control-label">End-date</label>
+                                        <div class="col-md-6">
 
                                             <input type="date" class="form-control" id="end_date" name="end_date"  required <%if(data.length) {%>value="<%= data[0].end_date%>" <%}%> >
                                         </div>
                                     </div>
 									<div class="form-actions ">
 										 <div class="col-md-offset-3">
-								    	 <button type="submit" name="submit" class="btn green">Submit</button>
-									 	<button type="reset" class="btn default">Cancel</button>
+								    	 <button type="submit" name="submit"  class="btn btn-success">Submit</button>
+									 	<button type="reset" class="btn btn-warning">Cancel</button>
 										</div>
 									</div>
 
@@ -96,14 +62,10 @@
 							</form>
 
 							<%}catch (ex){}%>
-					</div>
 
 
-
-					</div>
-				</div>
-	</div>
 </div>
 
 </body>
 
+</html>

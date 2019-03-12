@@ -1,9 +1,20 @@
 <html>
-<head></head>
+<head>
+    <title>View Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+</head>
 
 
 <body>
-<table class="table table-striped table-hover table-bordered" id="sample_2">
+<div class="container">
+    <div class="table-responsive">
+        <table class="table table-striped">
+
     <thead>
     <tr>
         <th style="display: none"></th>
@@ -18,11 +29,11 @@
     <% try { if(data.length){
 
     for(var i = 0;i < data.length;i++) { %>
-    <tr class="odd gradeX">
+    <tr >
         <td style="display: none"></td>
-        <td class="textform"><%=data[i].work%></td>
-        <td class="textform"><%=data[i].start_date%></td>
-        <td class="textform"><%=data[i].end_date%></td>
+        <td ><%=data[i].work%></td>
+        <td><%=data[i].start_date%></td>
+        <td ><%=data[i].end_date%></td>
 
         <td><button><a data-toggle="modal" data-target="#operation<%=data[i].id%>"><i class='glyphicon glyphicon-adjust' style='color:black'></i></a></button></td>
     </tr>
@@ -32,7 +43,7 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="alert alert-danger" style="backgtround-color:red">
-                        <strong>Do Your Choice!!</strong>
+                        <strong>Choose operation</strong>
                     </div>
                     <center>
                         <button class="modal-button"><a href='/taskedit/<%=data[i].id%>'><span class='glyphicon glyphicon-edit' style='color:darkred'></span>&nbsp;Edit</a></button>
@@ -77,6 +88,7 @@
 
     </tbody>
 </table>
-
+    </div>
+</div>
 </body>
 </html>

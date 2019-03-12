@@ -15,7 +15,7 @@ var mysql = require('mysql');
 var flash= require('express-flash');
 // all environments
 
-app.set('port', process.env.PORT || 3001);
+app.set('port', process.env.PORT || 3003);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
