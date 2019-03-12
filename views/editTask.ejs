@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+	<meta content="" name="description" />
+
+</head>
+<body >
+
+					<span class="username">Admin</span>
+
+					<li><a href="/logout">&nbsp;Log Out</a></li>
+
+
+
+
+
+
+
+
+
+     <div class="page-content">
+			<div class="row">
+				<div class="col-md-12"> 
+					<ul class="page-breadcrumb breadcrumb"> 
+
+					
+
+						<li>
+							<a href="#">Work </a>
+						</li>
+					</ul> 
+				</div>
+			</div> 
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-toolbar">
+
+								<div class="btn-group">
+									<a href="/taskview"><button >
+									View Task &nbsp;
+									</button></a>
+								</div>
+					</div>
+					<div class="portlet box purple ">
+						<div class="portlet-title">
+							<div class="caption">
+								 Add Work
+							</div>
+
+						</div>
+						<div class="portlet-body form">
+
+							<%try{%>
+
+							<form class="form-horizontal form-bordered" action="/taskupdate/<%= data[0].id%>" role="form" method='post'>
+                                
+								<div class="form-body">
+
+
+									<div class="form-group">
+										<label class="col-md-3" >Work</label>
+										<div class="col-md-9">
+                                            <input type="hidden" class="form-control" id="id" name="id" <% if(data.length){%> value="<%= data[0].id%>" <%}%>>
+											<input type="text" class="form-control" id="work" name="work"  required <%if(data.length) {%>value="<%= data[0].work%>" <%}%> >
+										</div>
+									</div>
+
+                                    <div class="form-group">
+                                        <label class="col-md-3">Start-date</label>
+                                        <div class="col-md-9"> 
+                                            <input type="date" class="form-control" id="start_date" name="start_date"  required <%if(data.length) {%>value="<%= data[0].start_date%>" <%}%> >
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label class="col-md-3">End-date</label>
+                                        <div class="col-md-9">
+
+                                            <input type="date" class="form-control" id="end_date" name="end_date"  required <%if(data.length) {%>value="<%= data[0].end_date%>" <%}%> >
+                                        </div>
+                                    </div>
+									<div class="form-actions ">
+										 <div class="col-md-offset-3">
+								    	 <button type="submit" name="submit" class="btn green">Submit</button>
+									 	<button type="reset" class="btn default">Cancel</button>
+										</div>
+									</div>
+
+
+								</div>
+							</form>
+
+							<%}catch (ex){}%>
+					</div>
+
+
+
+					</div>
+				</div>
+	</div>
+</div>
+
+</body>
+
