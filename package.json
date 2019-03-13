@@ -2,7 +2,10 @@
   "name": "todohuman",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+    "scripts": {
+    "start": " node app.js"
+  },
+
   "dependencies": {
     "body-parser": "^1.18.3",
     "ejs": "^1.0.0",
