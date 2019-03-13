@@ -12,7 +12,6 @@ module.exports = function () {
            // port : 3306,
             database:'heroku_040d6767a44553f'
 
-
         });
         return conn;
     }
