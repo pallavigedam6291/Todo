@@ -11,6 +11,8 @@ module.exports = function () {
             password : '42133918',
            // port : 3306,
             database:'heroku_040d6767a44553f'
+
+           
         });
         return conn;
     }

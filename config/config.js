@@ -1,5 +1,5 @@
 
-var host="http://localhost:8056/";
+
 
 module.exports = function() {
 

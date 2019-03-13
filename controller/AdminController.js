@@ -7,7 +7,7 @@ var database = new database();
 var conn = database.con();
 var Config = require('../config/config.js');
 var Config_URL = new Config();
-var Admin = require('../models/Admin');
+
 
 var mysql = require("mysql");
 exports.view = function(req, res){
