@@ -7,7 +7,8 @@ var TaskController = require('../controller/TaskController');
 
 module.exports = function (app, passport) {
 
-    app.get('/', AdminController.view);
+    app.get('/', AdminController.viewr);
+    app.post('/register', AdminController.register);
     app.get('/login', AdminController.view);
     app.post('/checklogin', AdminController.checklogin);
     app.get('/logout', AdminController.logout);

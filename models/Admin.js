@@ -4,6 +4,20 @@ var database = new database();
 var conn = database.con();
 var mysql = require("mysql");
 
+module.exports.register = function(data,callback){
+    var sql = "INSERT INTO ?? SET ?";
+    var table = ["users", data];
+    var queries = mysql.format(sql,table);
+    conn.query(queries,callback);
+}
+
+// module.exports.checklogin = function(data,callback){
+//     var sql = "SELECT * FROM ?? where username=? and password=?";
+//     var table = ["users", data];
+//     var queries = mysql.format(sql,table);
+//     conn.query(queries,callback);
+// }
+
 module.exports.view = function(callback) {
     var sql = "Select * from ??";
     var table = ["users"];

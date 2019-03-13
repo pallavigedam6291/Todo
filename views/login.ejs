@@ -42,25 +42,26 @@
 				</button>            
 			</div>
 
-			<center>
-	<% if(messages.success){%>
-				<div class="alert alerts alert-success alert-dismissible" role="alert">
-					<span><%= messages.success%></span>
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<% }%>
+			 <center>
+				 <% if(messages.success){%>
+					 <div class="alert alerts alert-success alert-dismissible" role="alert">
+						 <span><%= messages.success%></span>
+						 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							 <span aria-hidden="true">&times;</span>
+						 </button>
+					 </div>
+				 <% }%>
 
-				<% if(messages.error){%>
-				<div class="alert alerts alert-danger alert-dismissible" role="alert">
-					<span><%= messages.error%></span>
-					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<% }%>
-		</center>
+				 <% if(messages.error){%>
+					 <div class="alert alerts alert-danger alert-dismissible" role="alert">
+						 <span><%= messages.error%></span>
+						 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							 <span aria-hidden="true">&times;</span>
+						 </button>
+					 </div>
+				 <% }%>
+			 </center>
+
 
 		 </form>
 		 
