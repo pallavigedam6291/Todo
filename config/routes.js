@@ -10,8 +10,9 @@ module.exports = function (app, passport) {
 
     app.get('/login', AdminController.view);
     app.post('/checklogin', AdminController.checklogin);
-    app.get('/logout', AdminController.logout); 
+    app.get('/logout', AdminController.logout);
 
+    app.get('/', TaskController.view);
     app.get('/taskview', TaskController.view);
     app.get('/taskadd', TaskController.add);
     app.get('/taskedit/:id', TaskController.add);
